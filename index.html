@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 <div class="pin-generator half-width">
                     <input id="display-num" class="form-control" type="text">
-                    <button  onclick="getPassword();" class="generate-btn">Generate Pin</button>
+                    <button onclick="getPassword();" class="generate-btn">Generate Pin</button>
                 </div>
             </div>
             <div class="col-md-6">
@@ -87,17 +87,17 @@
      }
 
      function forSubmit(){
-         var ranDom = document.getElementById("display-num").value;
-         var veriFy = document.getElementById("for-display").value;
+         var ranDom = document.getElementById("display-num").innerHTML;
+         var veriFy = document.getElementById("for-display").innerHTML;
 
-     if(ranDom && veriFy != "" && ranDom ==veriFy)
+     if(ranDom == veriFy)
      {
          match = document.getElementById("matched");
          match.style.display = "block";
      }
      else
      {
-         forNotMatch = document.getElementById("not-matched");
+         forNotMatch = document.getElementById("not-matched").innerText;
          forNotMatch.style.display = "block";   
      }
      }
