@@ -114,7 +114,8 @@ color: #E0B612;
 }
 
 
-.notify-section
+#matched,
+#not-matched
 {
     display: none;
 }

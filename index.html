@@ -87,20 +87,27 @@
      }
 
      function forSubmit(){
-         var ranDom = document.getElementById("display-num").innerHTML;
-         var veriFy = document.getElementById("for-display").innerHTML;
+        
+         var ranDom = document.getElementById("display-num").value;
+         var veriFy = document.getElementById("for-display").value;
 
      if(ranDom == veriFy)
      {
          match = document.getElementById("matched");
          match.style.display = "block";
+
+         forNotMatch = document.getElementById("not-matched");
+         forNotMatch.style.display = "none";  
      }
      else
      {
-         forNotMatch = document.getElementById("not-matched").innerText;
+         forNotMatch = document.getElementById("not-matched");
          forNotMatch.style.display = "block";   
+
+         match = document.getElementById("matched");
+         match.style.display = "none";
      }
-     }
+    }
     </script>
 </body>
 </html>
