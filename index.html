@@ -37,12 +37,13 @@
                               <div class="button" value="3" onclick="dis('3')">3</div>
                             </div>
                             <div class="calc-button-row">
-                                <div class="button" value="<" onclick="back()"><</div>
+                                <div class="button" value="<" onclick="back()
+                                 "><</div>
                                 <div class="button" value="0" onclick="dis('0')">0</div>
                                 <div class="button" value="C" onclick="clr()">C</div>
                             </div>
                             <div>
-                                <button onclick="forSubmit()" type="submit" id="submit" class="submit-btn">Submit</button>
+                        <button onclick="forSubmit()" type="submit" id="submit" class="submit-btn">Submit</button>
                                 <p id="actionLeft" class="action-left">3 try left</p>
                             </div>
                     </div>
@@ -50,8 +51,8 @@
             </div>
         </div>
         <div class="notify-section">
-            <p id="not-matched" class="notify">❌ Pin Didn't Match, Please try again</p>
-            <p id="matched" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+            <p id="not-matched" class="notify">❌Pin Didn't Match, Please try again</p>
+            <p id="matched" class="notify">✅Pin Matched... Secret door is opening for you</p>
         </div>
     </div>
 
@@ -79,15 +80,14 @@
      document.getElementById("for-display").value = "";
      }
 
-     
      function back()
      {
        let displays = document.getElementById("for-display").value;
        document.getElementById("for-display").value = displays.substring(0,displays.length-1);
      }
 
-     function forSubmit(){
-         var tryLeft = 3;
+    function forSubmit(){
+         
          var ranDom = document.getElementById("display-num").value;
          var veriFy = document.getElementById("for-display").value;
          
@@ -98,6 +98,7 @@
 
          forNotMatch = document.getElementById("not-matched");
          forNotMatch.style.display = "none";  
+
      }
 
      else
@@ -107,17 +108,9 @@
 
          match = document.getElementById("matched");
          match.style.display = "none";
-
-         tryLeft--;
-         
-        if( tryLeft == 0 )
-         {
-           lastTry = document.getElementById("submit");
-           lastTry.disabled = true;
-           document.getElementById("actionLeft").style.display = "block";
-         }
      }
-    }
+   }
+
     </script>
 </body>
 </html>
