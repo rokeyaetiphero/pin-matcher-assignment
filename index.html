@@ -98,6 +98,9 @@
 
          forNotMatch = document.getElementById("not-matched");
          forNotMatch.style.display = "none"; 
+
+         forAction = document.getElementById("actionLeft");
+         forAction.style.display = "none";
      }
 
      else
@@ -107,8 +110,12 @@
 
          match = document.getElementById("matched");
          match.style.display = "none";
+
+         forAction = document.getElementById("actionLeft");
+         forAction.style.display = "block";
+         clickCount();
      }
-     clickCount();
+     
    }
 
    //Action left counter
