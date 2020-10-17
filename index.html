@@ -44,7 +44,7 @@
                             </div>
                             <div>
                         <button onclick="forSubmit()" type="submit" id="submit" class="submit-btn">Submit</button>
-                                <p id="actionLeft" class="action-left">3 try left</p>
+                                <p id="actionLeft" class="action-left"></p>
                             </div>
                     </div>
                 </div>
@@ -108,6 +108,25 @@
          match = document.getElementById("matched");
          match.style.display = "none";
      }
+     clickCount();
+   }
+
+   //Action left counter
+   var count = 0;
+   function clickCount(){
+       count += 1;
+       
+   if(count == 0){
+       document.getElementById("actionLeft").innerText = "3 try left";
+   } else if(count == 1){
+       document.getElementById("actionLeft").innerText = "2 try left";
+   } else if(count == 2){
+       document.getElementById("actionLeft").innerText = "1 try left";
+   }else{
+      document.getElementById("actionLeft").innerText = "";
+      document.getElementById("submit").disabled = true;
+      document.getElementById("submit").style.backgroundColor = "#A0A6AB";
+}  
    }
     </script>
 </body>
